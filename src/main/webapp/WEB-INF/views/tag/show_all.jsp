@@ -54,7 +54,8 @@
                     </li>
                     <c:forEach begin="${0}" end="${totalPage - 1}" var="p">
                         <li class="page-item ${number == p ? 'active' : ''}">
-                            <a class="page-link" href="?_search=${search}&_pageIndex=${p}&_row=6&_sort=${sort}">${p+1}</a>
+                            <a class="page-link"
+                               href="?_search=${search}&_pageIndex=${p}&_row=6&_sort=${sort}">${p+1}</a>
                         </li>
                     </c:forEach>
                     <li class="page-item ${last ? 'disabled' : ''}">
@@ -72,7 +73,7 @@
         e.preventDefault();
         var search_text = $("#text_name").val();
         var sort = $('#sort').val();
-        window.location = "${pageContext.request.contextPath}/tag/show-all?_search="+search_text+"&_pageIndex=0&_row=6&_sort="+sort+"";
+        window.location = "${pageContext.request.contextPath}/tag/show-all?_search=" + search_text + "&_pageIndex=0&_row=6&_sort=" + sort + "";
     })
 </script>
 
